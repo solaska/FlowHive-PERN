@@ -17,13 +17,6 @@ app.use("/api/auth", authRoutes);
 app.use("/api/projects", projectRoutes);
 app.use("/api/tasks", taskRoutes);
 
-app.get("/api/protected", auth, (req, res) => {
-  res.json({
-    message: "You are authorized",
-    userId: req.user,
-  });
-});
-
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
