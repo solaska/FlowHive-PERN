@@ -79,7 +79,7 @@ export default function Dashboard() {
           variant="destructive"
           onClick={() => {
             localStorage.removeItem("token");
-            window.location.href = "/login";
+            navigate("/login");
           }}
         >
           Logout
