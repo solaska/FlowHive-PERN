@@ -5,8 +5,8 @@ A modern full-stack project management platform built with the **PERN stack** (P
 ---
 
 Live Demo
-Frontend:
-Backend API:
+Frontend: https://client-fzx3.onrender.com
+Backend API: https://server-mvgt.onrender.com
 
 ---
 
@@ -125,7 +125,7 @@ Features include:
 
 ---
 
-# 🧠 Learning Goals
+# Learning Goals
 
 This project was built to practice:
 
@@ -140,20 +140,20 @@ This project was built to practice:
 
 ---
 
-# 📸 Screenshots
+# Screenshots
 
 - Dashboard
 
-![Dashboard](screenshots/Dashboard.png)
+![Dashboard](./screenshots/Dashboard.png)
 
 - Login Page
 
-![Login](screenshots/Login.png)
+![Login](./screenshots/Login.png)
 
 - Mobile collapsable Sidebar
 
-![Mobile](screenshots/Mobile.png)
+![Mobile](./screenshots/Mobile.png)
 
 - Tasks View
 
-![Tasks](screenshots/Tasks.png)
+![Tasks](./screenshots/Tasks.png)
