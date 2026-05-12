@@ -144,16 +144,16 @@ This project was built to practice:
 
 - Dashboard
 
-![Dashboard](./screenshots/Dashboard.png)
+![Dashboard](./screenshots/Dashboard.PNG)
 
 - Login Page
 
-![Login](./screenshots/Login.png)
+![Login](./screenshots/Login.PNG)
 
 - Mobile collapsable Sidebar
 
-![Mobile](./screenshots/Mobile.png)
+![Mobile](./screenshots/Mobile.PNG)
 
 - Tasks View
 
-![Tasks](./screenshots/Tasks.png)
+![Tasks](./screenshots/Tasks.PNG)
