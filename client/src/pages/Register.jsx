@@ -11,18 +11,28 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
 
+  const [registering, setRegistering] = useState(false);
+
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    await API.post("/auth/register", {
-      username,
-      email,
-      password,
-    });
+    try {
+      setRegistering(true);
 
-    navigate("/login");
+      await API.post("/auth/register", {
+        username,
+        email,
+        password,
+      });
+
+      navigate("/login");
+    } catch (error) {
+      console.error("Registration error:", error);
+    } finally {
+      setRegistering(false);
+    }
   };
 
   return (
@@ -53,7 +63,9 @@ export default function Register() {
               onChange={(e) => setPassword(e.target.value)}
             />
 
-            <Button className="w-full">Create account</Button>
+            <Button className="w-full" disabled={registering}>
+              {registering ? "Creating account..." : "Create account"}
+            </Button>
           </form>
 
           <p className="text-sm text-center mt-4">
