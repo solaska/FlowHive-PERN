@@ -63,8 +63,8 @@ export default function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
 
-            <Button type="submit" className="w-full" disabled={loggingIn}>
-              {loggingIn ? "Signing in..." : "Sign in"}
+            <Button type="submit" className="w-full" disabled={loading}>
+              {loading ? "Signing in..." : "Sign in"}
             </Button>
           </form>
 
