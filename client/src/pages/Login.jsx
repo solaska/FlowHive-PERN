@@ -30,9 +30,12 @@ export default function Login() {
       if (res.data.user) {
         localStorage.setItem("user", JSON.stringify(res.data.user));
       }
+
       navigate("/dashboard");
-    } catch (error) {
-      console.error("Login error:", error);
+    } catch (err) {
+      console.error("Login error:", err);
+
+      alert(err.response?.data?.message || "Login failed");
     } finally {
       setLoading(false);
     }
@@ -60,8 +63,8 @@ export default function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
 
-            <Button className="w-full" disabled={loading}>
-              {loading ? "Signing in..." : "Sign in"}
+            <Button type="submit" className="w-full" disabled={loggingIn}>
+              {loggingIn ? "Signing in..." : "Sign in"}
             </Button>
           </form>
 

@@ -28,8 +28,10 @@ export default function Register() {
       });
 
       navigate("/login");
-    } catch (error) {
-      console.error("Registration error:", error);
+    } catch (err) {
+      console.error("Registration error:", err);
+
+      alert(err.response?.data?.message || "Registration failed");
     } finally {
       setRegistering(false);
     }
@@ -63,7 +65,7 @@ export default function Register() {
               onChange={(e) => setPassword(e.target.value)}
             />
 
-            <Button className="w-full" disabled={registering}>
+            <Button type="submit" className="w-full" disabled={registering}>
               {registering ? "Creating account..." : "Create account"}
             </Button>
           </form>
