@@ -32,13 +32,11 @@ router.post("/register", async (req, res) => {
       [username, email, hashed],
     );
 
-    // token
-    const token = jwt.sign(
-      { userId: newUser.rows[0].id },
-      process.env.JWT_SECRET,
-    );
-
-    res.json({ token });
+    // Return success response
+    res.status(201).json({
+      message: "User registered successfully",
+      user: newUser.rows[0],
+    });
   } catch (err) {
     console.error(err.message);
     res.status(500).send("Server error");
